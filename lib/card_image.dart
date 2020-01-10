@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/custom_floating_action_button.dart';
 
 class CardImage extends StatelessWidget {
 
@@ -14,6 +15,7 @@ class CardImage extends StatelessWidget {
       margin: EdgeInsets.only(
         top: 80.0,
         left: 20.0,
+        bottom: 20.0,
       ),
 
       decoration: BoxDecoration(
@@ -26,13 +28,21 @@ class CardImage extends StatelessWidget {
         boxShadow: <BoxShadow>[
           BoxShadow(
             color: Colors.black38,
-            blurRadius: 15.0,
+            blurRadius: 50.0,
             offset: Offset(0.0, 7.0),
           )
         ]
       ),
     );
+
+    final final_card = Stack(
+      alignment: Alignment(0.95, 1.0),
+      children: <Widget>[
+        card,
+        CustomFloatingActionButton(),
+      ],
+    );
     
-    return card;
+    return final_card;
   }
 }

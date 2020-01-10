@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/custom_button.dart';
 import 'package:platzi_trips_app/review_list.dart';
 
 class DescriptionPlace extends StatelessWidget {
@@ -96,10 +97,12 @@ class DescriptionPlace extends StatelessWidget {
 
 
     final body = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         title_stars,
         description,
-        ReviewList()
+        CustomButton('See More'),
+        ReviewList(),
       ],
     );
 
